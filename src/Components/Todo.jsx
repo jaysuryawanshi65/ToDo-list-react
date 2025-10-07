@@ -1,9 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
 import todo_icon from "../assets/todo_icon.png";
-import Todoitems from "./Todoitems";
+import Todoitems from "./TodoItems";
 
 const Todo = () => {
-  const [todoList, setTodoList] = useState(localStorage.getItem("todos")? JSON.parse(localStorage.getItem("todos")) : []);
+  const [todoList, setTodoList] = useState(
+    localStorage.getItem("todos")
+      ? JSON.parse(localStorage.getItem("todos"))
+      : []
+  );
 
   const inputRef = useRef();
 
